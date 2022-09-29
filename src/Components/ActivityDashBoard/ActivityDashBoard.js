@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ActivityDashBoard = (props) => {
   const notify = () => toast("Wow You Completed Your Activities.Congrats!");
-  console.log(props);
+  // console.log(props);
   const { AddBreak } = props;
   const { addbreak } = props;
   const { ActivityForDashBoard } = props;

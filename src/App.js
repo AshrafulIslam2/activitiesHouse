@@ -34,9 +34,16 @@ function App() {
   };
   useEffect(() => {
     let productsfromCart = getDataFromCart();
-    const { BreakTime } = productsfromCart;
-    setBreak(BreakTime);
-  }, []);
+    if (productsfromCart) {
+      let Time = productsfromCart.BreakTime;
+      setBreak(Time);
+    } else {
+      setBreak(0);
+    }
+    // const { BreakTime } = productsfromCart;
+    // console.log(BreakTime);
+    // setBreak(BreakTime);
+  }, [AddBreak]);
   // console.log(ActivityForDashBoard);
   return (
     <div className="main">
