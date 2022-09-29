@@ -8,3 +8,7 @@
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
+.yes{
+  color: #9DE0AD;
+  font-size: 50px;
+}
