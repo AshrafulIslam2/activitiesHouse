@@ -1,4 +1,7 @@
-.ActivityMainBlock{
+
+.main{
+  background-color:#E8E9EB;
+}.ActivityMainBlock{
   display: grid;
   grid-template-columns: 4fr 1fr;
 }

@@ -2,7 +2,13 @@ import React from "react";
 import "./Activity.css";
 
 const Activity = (props) => {
+  // console.log(props);
+  const { activity } = props;
   const { name, description, img, time } = props.activity;
+  const { button } = props;
+  // const { isActive } = props;
+  const { AddYourActivity } = props;
+  //console.log(activity);
   return (
     <div className="activitySingalBlock">
       <div className="imgBG">
@@ -25,11 +31,11 @@ const Activity = (props) => {
           marginBottom: "10px",
           borderRadius: "10px",
           border: "none",
-          backgroundImage:
-            "url('https://i.postimg.cc/7P0hqtLK/background3.png')",
+          backgroundColor: "#0269A4",
         }}
+        onClick={() => AddYourActivity({ activity })}
       >
-        Add your Activity
+        {button}
       </button>
     </div>
   );

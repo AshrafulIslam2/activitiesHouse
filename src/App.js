@@ -6,18 +6,30 @@ import { FaCentos } from "react-icons/fa";
 import QuestionAnswer from "./Components/QuestionAnswer/QuestionAnswer";
 function App() {
   const [Activitys, SetActivitys] = useState([]);
+  const [buttonText, setButtonText] = useState("Add Your Activity");
+  const [AddBreak, setBreak] = useState(0);
+  // const [isActive, setIsActive] = useState(false);
+  const [ActivityForDashBoard, setActivityForDashBoard] = useState([]);
+
   useEffect(() => {
     fetch("./activity.json")
       .then((res) => res.json())
       .then((data) => SetActivitys(data));
   }, []);
+  const AddYourActivity = (activity) => {
+    let NewActivity = [];
+    if (Activitys.id === activity.id) {
+      NewActivity = [...ActivityForDashBoard, activity];
+    }
+
+    setActivityForDashBoard(NewActivity);
+  };
+  const addbreak = (time) => {
+    setBreak(time);
+  };
+  // console.log(ActivityForDashBoard);
   return (
-    <div
-      className="main"
-      style={{
-        backgroundColor: "#E8E9EB",
-      }}
-    >
+    <div className="main">
       <div>
         <FaCentos className="icon"></FaCentos>
         <h3
@@ -38,11 +50,21 @@ function App() {
       <div className="ActivityMainBlock">
         <div className="ActivityItemBlock">
           {Activitys.map((activity) => (
-            <Activity key={activity.id} activity={activity}></Activity>
+            <Activity
+              key={activity.id}
+              activity={activity}
+              button={buttonText}
+              // isActive={isActive}
+              AddYourActivity={AddYourActivity}
+            ></Activity>
           ))}
         </div>
         <div className="mainDashBorad">
-          <ActivityDashBoard></ActivityDashBoard>
+          <ActivityDashBoard
+            ActivityForDashBoard={ActivityForDashBoard}
+            addbreak={addbreak}
+            AddBreak={AddBreak}
+          ></ActivityDashBoard>
         </div>
         <div className="QuestionBlock">
           <QuestionAnswer></QuestionAnswer>
