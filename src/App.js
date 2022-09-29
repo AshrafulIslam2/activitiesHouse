@@ -4,9 +4,10 @@ import ActivityDashBoard from "./Components/ActivityDashBoard/ActivityDashBoard"
 import "./App.css";
 import { FaCentos } from "react-icons/fa";
 import QuestionAnswer from "./Components/QuestionAnswer/QuestionAnswer";
+import { AddtoDb, getDataFromCart } from "./Components/AddToDb";
 function App() {
   const [Activitys, SetActivitys] = useState([]);
-  const [buttonText, setButtonText] = useState("Add Your Activity");
+  // const [buttonText, setButtonText] = useState("Add Your Activity");
   const [AddBreak, setBreak] = useState(0);
   // const [isActive, setIsActive] = useState(false);
   const [ActivityForDashBoard, setActivityForDashBoard] = useState([]);
@@ -26,7 +27,13 @@ function App() {
   };
   const addbreak = (time) => {
     setBreak(time);
+    AddtoDb(time);
   };
+  useEffect(() => {
+    let productsfromCart = getDataFromCart();
+    const { BreakTime } = productsfromCart;
+    setBreak(BreakTime);
+  }, []);
   // console.log(ActivityForDashBoard);
   return (
     <div className="main">
@@ -53,7 +60,7 @@ function App() {
             <Activity
               key={activity.id}
               activity={activity}
-              button={buttonText}
+              // button={buttonText}
               // isActive={isActive}
               AddYourActivity={AddYourActivity}
             ></Activity>

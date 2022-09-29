@@ -5,7 +5,7 @@ const Activity = (props) => {
   // console.log(props);
   const { activity } = props;
   const { name, description, img, time } = props.activity;
-  const { button } = props;
+  // const { button } = props;
   // const { isActive } = props;
   const { AddYourActivity } = props;
   //console.log(activity);
@@ -35,7 +35,7 @@ const Activity = (props) => {
         }}
         onClick={() => AddYourActivity({ activity })}
       >
-        {button}
+        Add your Activity
       </button>
     </div>
   );

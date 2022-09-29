@@ -1,6 +1,5 @@
 import React from "react";
 import "./ActivityDashBoard.css";
-
 const ActivityDashBoard = (props) => {
   console.log(props);
   const { AddBreak } = props;
