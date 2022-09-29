@@ -13,11 +13,11 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#E8E9EB",
       }}
     >
       <div>
-        <FaCentos className="yes"></FaCentos>
+        <FaCentos className="icon"></FaCentos>
         <h3
           style={{
             color: "#363636",
@@ -39,7 +39,7 @@ function App() {
             <Activity key={activity.id} activity={activity}></Activity>
           ))}
         </div>
-        <div>
+        <div className="mainDashBorad">
           <ActivityDashBoard></ActivityDashBoard>
         </div>
       </div>

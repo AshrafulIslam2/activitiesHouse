@@ -1,0 +1,72 @@
+.ActivityDashBoardMain{
+    position: sticky;
+    top: 0;
+}
+.informationSection{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.informationSection img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.informationSection h5{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.informationSection p{
+    margin: 0;
+    padding: 0;
+    color:rgb(54, 54, 113) ;
+    font-weight: 500;
+}
+.HealthInformation{
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.HealthInformation div h5 {
+    margin: 0;
+    font-weight: 500;
+
+}
+.nameofInformation{
+    font-size: 40px;
+    font-weight: 800;
+}
+.ActivityDashBoardMain{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.buttonBreak{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.buttonBreak button{
+    color: white;
+    font-size: 8px;
+    font-weight: 900;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(61, 114, 167);
+    width: 33px;
+    height: 32px;
+}
+.ExerciseDiv{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.ActivityDivfinal{
+    display: flex;
+    justify-content: space-between;
+}
