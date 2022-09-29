@@ -1,0 +1,29 @@
+.QuestionDiv{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left:100px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.innerQuestion{
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+@media screen and (min-width: 780px) and (max-width: 1080px)  {
+    .QuestionDiv{
+        grid-template-columns: 1fr;
+        margin-left:0;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 779px)  {
+    .QuestionDiv{
+        grid-template-columns: 1fr;
+        margin-left:10px;
+    }
+
+   
+  }

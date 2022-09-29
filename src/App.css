@@ -18,3 +18,25 @@
 .mainDashBorad{
   position: relative;
 }
+@media screen and (min-width: 780px) and (max-width: 1080px)  {
+  .main{
+    width: 100vh;
+  }
+  .ActivityMainBlock{
+    grid-template-columns: 3fr 2fr;
+  }
+  .ActivityItemBlock{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 779px)  {
+  .main{
+    width: 100vh;
+  }
+  .ActivityMainBlock{
+    grid-template-columns: 3fr 2fr;
+  }
+  .ActivityItemBlock{
+    grid-template-columns: 1fr;
+  }
+}

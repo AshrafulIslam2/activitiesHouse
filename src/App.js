@@ -3,6 +3,7 @@ import Activity from "./Components/Activity/Activity";
 import ActivityDashBoard from "./Components/ActivityDashBoard/ActivityDashBoard";
 import "./App.css";
 import { FaCentos } from "react-icons/fa";
+import QuestionAnswer from "./Components/QuestionAnswer/QuestionAnswer";
 function App() {
   const [Activitys, SetActivitys] = useState([]);
   useEffect(() => {
@@ -12,6 +13,7 @@ function App() {
   }, []);
   return (
     <div
+      className="main"
       style={{
         backgroundColor: "#E8E9EB",
       }}
@@ -41,6 +43,9 @@ function App() {
         </div>
         <div className="mainDashBorad">
           <ActivityDashBoard></ActivityDashBoard>
+        </div>
+        <div className="QuestionBlock">
+          <QuestionAnswer></QuestionAnswer>
         </div>
       </div>
     </div>
