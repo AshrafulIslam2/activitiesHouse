@@ -60,11 +60,14 @@ const ActivityDashBoard = () => {
           <h3>Activity Time</h3>
           <p>{}Minute</p>
         </div>
+      </div>
+      <div className="ExerciseDiv">
         <div className="ActivityDivfinal">
           <h3>Break Time</h3>
           <p>{}Minute</p>
         </div>
       </div>
+      <button className="Complete">complete Activity</button>
     </div>
   );
 };

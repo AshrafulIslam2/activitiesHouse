@@ -63,10 +63,23 @@
 }
 .ExerciseDiv{
     background-color: white;
-    padding: 20px;
+    padding:10px;
+    margin-bottom:10px ;
     border-radius: 10px;
 }
 .ActivityDivfinal{
     display: flex;
     justify-content: space-between;
+}
+.Complete{
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: cadetblue;
+    border-radius: 10px;
 }
