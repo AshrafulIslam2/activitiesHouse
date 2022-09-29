@@ -1,6 +1,9 @@
 import React from "react";
 import "./ActivityDashBoard.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ActivityDashBoard = (props) => {
+  const notify = () => toast("Wow You Completed Your Activities.Congrats!");
   console.log(props);
   const { AddBreak } = props;
   const { addbreak } = props;
@@ -76,7 +79,10 @@ const ActivityDashBoard = (props) => {
           <p>{AddBreak} M</p>
         </div>
       </div>
-      <button className="Complete">complete Activity</button>
+      <button className="Complete" onClick={notify}>
+        complete Activity
+      </button>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
