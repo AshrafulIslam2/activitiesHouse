@@ -9,7 +9,7 @@ function App() {
   const [Activitys, SetActivitys] = useState([]);
   // const [buttonText, setButtonText] = useState("Add Your Activity");
   const [AddBreak, setBreak] = useState(0);
-  // const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const [ActivityForDashBoard, setActivityForDashBoard] = useState([]);
 
   useEffect(() => {
@@ -21,6 +21,9 @@ function App() {
     let NewActivity = [];
     if (Activitys.id === activity.id) {
       NewActivity = [...ActivityForDashBoard, activity];
+      setIsActive(true);
+    } else {
+      setIsActive(false);
     }
 
     setActivityForDashBoard(NewActivity);
@@ -61,7 +64,7 @@ function App() {
               key={activity.id}
               activity={activity}
               // button={buttonText}
-              // isActive={isActive}
+              isActive={isActive}
               AddYourActivity={AddYourActivity}
             ></Activity>
           ))}

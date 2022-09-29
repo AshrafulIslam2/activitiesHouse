@@ -6,7 +6,7 @@ const Activity = (props) => {
   const { activity } = props;
   const { name, description, img, time } = props.activity;
   // const { button } = props;
-  // const { isActive } = props;
+  const { isActive } = props;
   const { AddYourActivity } = props;
   //console.log(activity);
   return (
@@ -31,7 +31,7 @@ const Activity = (props) => {
           marginBottom: "10px",
           borderRadius: "10px",
           border: "none",
-          backgroundColor: "#0269A4",
+          backgroundColor: isActive ? "green" : "#0269A4",
         }}
         onClick={() => AddYourActivity({ activity })}
       >
